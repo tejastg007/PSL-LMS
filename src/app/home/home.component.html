@@ -1,65 +1,11 @@
 <div class="container">
-    <div class="card">
+    <div *ngFor="let cardData of cardsData" class="card">
         <div class="leftPart">
-            <p>registerd trainees</p>
-            <h2>2181</h2>
+            <p>{{ cardData.title }}</p>
+            <h2>{{ cardData.count }}</h2>
         </div>
         <div class="rightPart">
-            <i class="fas fa-users"></i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="leftPart">
-            <p>enrolled trainees</p>
-            <h2>237</h2>
-        </div>
-        <div class="rightPart">
-            <i class="fas fa-user-check"></i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="leftPart">
-            <p>courses</p>
-            <h2>27</h2>
-        </div>
-        <div class="rightPart">
-            <i class="fas fa-book"></i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="leftPart">
-            <p>annoncements</p>
-            <h2>82</h2>
-        </div>
-        <div class="rightPart">
-            <i class="fas fa-bullhorn"></i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="leftPart">
-            <p>sessions - 30 days</p>
-            <h2>726272</h2>
-        </div>
-        <div class="rightPart">
-            <i class="fas fa-poll"></i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="leftPart">
-            <p>unique logins - 30 days</p>
-            <h2>28282</h2>
-        </div>
-        <div class="rightPart">
-            <i class="fas fa-sign-in-alt"></i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="leftPart">
-            <p>active users - 30 days</p>
-            <h2>711</h2>
-        </div>
-        <div class="rightPart">
-            <i class="fas fa-check-double"></i>
+            <i ngClass="{{ cardData.icon }}"></i>
         </div>
     </div>
     <div class="card">
